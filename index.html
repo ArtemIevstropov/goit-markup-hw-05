@@ -24,8 +24,8 @@
         <nav class="header-nav">
             <a class="logo-first" href="./index.html">Web<span class="logo-second">Studio</span></a>
             <ul class="header-list">
-                <li class="header-link"><a class="link" href="./index.html">Студія</a></li>
-                <li class="header-link"><a class="link" href="./portfolio.html">Портфоліо</a></li>
+                <li class="header-link current"><a class="link" href="./index.html">Студія</a></li>
+                <li class="header-link "><a class="link" href="./portfolio.html">Портфоліо</a></li>
                 <li class="header-link"><a class="link" href="">Контакти</a></li>
             </ul>
         </nav>
@@ -48,7 +48,7 @@
 <!--ГЕРОЙ-->
 <main class="hero overlay">
     <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-    <button  class="hero-btn" type="button">Замовити послугу</button>
+    <button  class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
     
 </main>
 
@@ -103,9 +103,24 @@
     <div class="container">
         <h2 class="business-title">Чим ми займаємося</h2>
         <ul class="business-list">
-            <li class="business-img"><img src="./images/img1.jpg" width="370" height="294" alt="Програмування"></li>
-            <li class="business-img"><img src="./images/img2.jpg" width="370" height="294" alt="Розробка додатків"></li>
-            <li class="business-img"><img src="./images/img3.jpg" width="370" height="294" alt="Дизайн"></li>
+            <li class="business-img">
+                <div class="business-thumb">
+                    <img src="./images/img1.jpg" width="370" height="294" alt="Програмування">
+                    <p class="business-descr">Десктопні додатки</p>
+                </div>
+            </li>
+            <li class="business-img">
+                <div class="business-thumb">
+                    <img src="./images/img2.jpg" width="370" height="294" alt="Розробка додатків">
+                    <p class="business-descr">Мобільні додатки</p>
+                </div>
+            </li>
+            <li class="business-img">
+                <div class="business-thumb">
+                    <img src="./images/img3.jpg" width="370" height="294" alt="Дизайн">
+                    <p class="business-descr">Дизайнерські рішення</p>
+                </div>
+            </li>
         </ul>
     </div>
 </section>
@@ -337,6 +352,21 @@
         </div>
     </div>
 </footer>
+
+<!-- МОДАЛЬНЕ ВІКНО -->
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal-wrapper">
+        <button class="modal-btn" type="button" data-modal-close>
+            <svg class="close-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+    </div>
+
+</div>
+
+<script src="./modal.js"></script>
 
 </body>
 </html>
