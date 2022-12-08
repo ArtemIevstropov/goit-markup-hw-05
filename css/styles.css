@@ -91,6 +91,8 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 }
 
 .header-list .link {
+        display: block;
+        padding: 32px 0px;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
@@ -106,8 +108,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 .header-list {
         display: flex;
         align-items: center;
-        padding-top: 32px;
-        padding-bottom: 32px;
+       
 }
 
 .header-contacts-list {
@@ -130,6 +131,13 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
         transition: color var(--anim), fill var(--anim);
 }
 
+
+.header-contacts-list .link:hover,
+.header-contacts-list .link:focus {
+        color: var(--hover-text-color);
+        fill: var(--hover-text-color)
+}
+
 .header-link {
         position: relative;
 }
@@ -142,7 +150,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
         content: '';
         position: absolute;
         left: 0px;
-        bottom: -33px;
+        bottom: 0px;
         display: flex;
         width: 100%;
         height: 4px;
@@ -152,11 +160,7 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 }
 
-.header-contacts-list .link:hover,
-.header-contacts-list .link:focus {
-        color: var(--hover-text-color);
-        fill: var(--hover-text-color)
-}
+
 
 .contacts-icon {
         margin-right: 10px;
@@ -403,16 +407,15 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
         fill: var(--icon-fill);
 }
 
-.social-link:hover,
+.social-link:hover ,
 .social-link:focus {
         background-color: var(--main-logo-color);
-      
 }
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
         fill: var(--main-bg-color);
-}
+} 
 
 /* ПОСТІЙНІ КЛІЄНТИ */
 
@@ -443,11 +446,14 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
         padding: 16px 32px;
         border: 1px solid #AFB1B8;
         border-radius: 4px;
-        transition: fill var(--anim), border-color var(--anim);
+        border-color: var(--icon-fill);
+        transition: border-color var(--anim);
 }
 
 .clients-icon {
         fill: var(--icon-fill);
+        transition: fill var(--anim);
+
 }
 
 .clients-link:hover,
@@ -459,8 +465,6 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 .clients-link:focus .clients-icon {
         fill: var(--hover-text-color);
 }
-
-
 
 
 
