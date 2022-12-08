@@ -288,6 +288,9 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 
 /* ЧИМ МИ ЗАЙМАЄМОСЯ */
 
+.business {
+        padding-top: 0px;
+}
 
 .business-title {
         margin-bottom: 50px;
